@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import { Box, Typography, Link, Button } from "@mui/material";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className="container">
+      <Box className="side left">
+        <Box className="image men"></Box>
+
+        <Box className="caption">
+          <Typography className="header">Men</Typography>
+          <Link sx={{ textDecoration: "none" }}>
+            <Button className="landingBtn">
+              2023 Men's Fall/Winter Collection
+            </Button>
+          </Link>
+        </Box>
+      </Box>
+
+      <Box className="side right">
+        <Box className="image women"></Box>
+
+        <Box className="caption">
+          <Typography className="header">Women</Typography>
+          <Link sx={{ textDecoration: "none" }}>
+            <Button className="landingBtn">
+              2023 Women's Fall/Winter Collection
+            </Button>
+          </Link>
+        </Box>
+      </Box>
+    </Box>
   );
-}
+};
 
 export default App;
